@@ -174,6 +174,7 @@ namespace plog
         {
             plog::detail::operator<<(stream, static_cast<util::nstring>(data));
         }
+#ifndef FIXCUSTOMCONTAINER
 
         // Print std containers
         template<class T>
@@ -198,6 +199,7 @@ namespace plog
 
             stream << "]";
         }
+#endif
 #endif
 #endif
 
